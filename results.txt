@@ -1,0 +1,22 @@
+episodes 500:
+(minigrid_gen) vipuser@ubuntu22:~$ python eval_minigrid.py --model ppo_oneroomS8_200k.zip --episodes 500 --seed0 0 --device cpu --envs \
+  BabyAI-OneRoomS8-v0 BabyAI-OneRoomS12-v0 BabyAI-OneRoomS16-v0 BabyAI-OneRoomS20-v0
+Eval BabyAI-OneRoomS8-v0: 100%|██████████████| 500/500 [00:01<00:00, 305.31it/s]
+BabyAI-OneRoomS8-v0      | avg_return=0.890 | success=500/500 (100.00%) | 95%CI=[99.24%, 100.00%]
+Eval BabyAI-OneRoomS12-v0: 100%|██████████████| 500/500 [00:09<00:00, 51.64it/s]
+BabyAI-OneRoomS12-v0     | avg_return=0.643 | success=354/500 (70.80%) | 95%CI=[66.67%, 74.61%]
+Eval BabyAI-OneRoomS16-v0: 100%|██████████████| 500/500 [00:17<00:00, 28.79it/s]
+BabyAI-OneRoomS16-v0     | avg_return=0.649 | success=360/500 (72.00%) | 95%CI=[67.91%, 75.76%]
+Eval BabyAI-OneRoomS20-v0: 100%|██████████████| 500/500 [00:30<00:00, 16.65it/s]
+BabyAI-OneRoomS20-v0     | avg_return=0.596 | success=327/500 (65.40%) | 95%CI=[61.13%, 69.44%]
+(minigrid_gen) vipuser@ubuntu22:~$ python eval_minigrid.py --model ppo_mix_S8S12S16_200k.zip --episodes 500 --seed0 0 --device cpu --envs \
+  BabyAI-OneRoomS8-v0 BabyAI-OneRoomS12-v0 BabyAI-OneRoomS16-v0 BabyAI-OneRoomS20-v0
+Eval BabyAI-OneRoomS8-v0: 100%|██████████████| 500/500 [00:01<00:00, 320.54it/s]
+BabyAI-OneRoomS8-v0      | avg_return=0.896 | success=493/500 (98.60%) | 95%CI=[97.14%, 99.32%]
+Eval BabyAI-OneRoomS12-v0: 100%|█████████████| 500/500 [00:04<00:00, 105.38it/s]
+BabyAI-OneRoomS12-v0     | avg_return=0.880 | success=471/500 (94.20%) | 95%CI=[91.79%, 95.93%]
+Eval BabyAI-OneRoomS16-v0: 100%|██████████████| 500/500 [00:09<00:00, 51.52it/s]
+BabyAI-OneRoomS16-v0     | avg_return=0.800 | success=424/500 (84.80%) | 95%CI=[81.39%, 87.68%]
+Eval BabyAI-OneRoomS20-v0: 100%|██████████████| 500/500 [00:16<00:00, 30.51it/s]
+BabyAI-OneRoomS20-v0     | avg_return=0.781 | success=412/500 (82.40%) | 95%CI=[78.82%, 85.49%]
+
